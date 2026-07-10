@@ -1,6 +1,5 @@
 {
     "geode": "3.0.0",
-    "apiVersion": "3.0.0",
     "id": "beatap.save_on_crash",
     "version": "1.0.0",
     "name": "Save On Crash",
