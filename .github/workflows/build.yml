@@ -13,8 +13,9 @@ jobs:
     - name: Build Mod File
       shell: powershell
       run: |
-        curl -sL https://github.com -o geode.zip
-        Expand-Archive geode.zip -DestinationPath .
+        Invoke-WebRequest -Uri "https://github.com" -OutFile "geode.zip"
+        Expand-Archive -Path "geode.zip" -DestinationPath "." -Force
+        $env:PATH += ";$PWD"
         geode sdk install
         geode profile auto
         geode package build .
