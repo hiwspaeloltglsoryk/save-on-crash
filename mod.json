@@ -1,11 +1,10 @@
 {
     "geode": "3.0.0",
-    "id": "adam.save_on_crash",
+    "apiVersion": "3.0.0",
+    "id": "beatap.save_on_crash",
     "version": "1.0.0",
     "name": "Save On Crash",
     "developer": "beatap",
-    "description": "Instantly duplicates local game data into an isolated backup folder when an unhandled game crash occurs.",
-    "repository": "https://github.com/hiwspaeloltglsoryk/save-on-crash/new/main",
-    "tags": ["utility", "performance"],
+    "description": "Saves your files automatically if the game crashes.",
     "platforms": ["windows"]
 }
