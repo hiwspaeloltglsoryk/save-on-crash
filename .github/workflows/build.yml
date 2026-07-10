@@ -10,5 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build Mod
-      uses: geode-sdk/build-geode-mod@main
+    - name: Build Mod File
+      shell: powershell
+      run: |
+        curl -sL https://github.com -o geode.zip
+        Expand-Archive geode.zip -DestinationPath .
+        geode sdk install
+        geode profile auto
+        geode package build .
