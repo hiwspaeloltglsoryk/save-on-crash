@@ -1,5 +1,9 @@
 name: Build Mod
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -9,8 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Geode SDK
-      uses: geode-sdk/setup-geode-sdk@main
-
     - name: Build Mod
-      uses: geode-sdk/build-geode-mod@main
+      uses: geode-sdk/build-geode-mod@v2
